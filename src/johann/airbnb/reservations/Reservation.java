@@ -6,11 +6,11 @@ import java.util.Date;
 
 public class Reservation {
     private static int compteur = 0;
-    private int identifiant;
-    private Sejour sejour;
-    private Personne voyageur;
-    private boolean estValidée;
-    private Date dateDeReservation;
+    private final int identifiant;
+    private final Sejour sejour;
+    private final Personne voyageur;
+    private final boolean estValidée;
+    private final Date dateDeReservation;
 
     public Reservation(Sejour sejour, Personne voyageur) {
         compteur++;

@@ -6,11 +6,11 @@ public class Personne {
     private  static int age;
 
     public Personne(String prenom, String nom, int age) {
-        this.prenom = prenom;
-        this.nom = nom;
-        this.age = age;
+        Personne.prenom = prenom;
+        Personne.nom = nom;
+        Personne.age = age;
     }
     public void afficher(){
-        System.out.println(this.prenom +" "+ this.nom +" ("+this.age+" ans)");
+        System.out.println(prenom +" "+ nom +" ("+ age+" ans)");
     }
 }
