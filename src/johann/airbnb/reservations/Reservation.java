@@ -5,6 +5,7 @@ import johann.airbnb.utilisateurs.Personne;
 import java.util.Date;
 
 public class Reservation {
+    private static int compteur = 0;
     private int identifiant;
     private Sejour sejour;
     private Personne voyageur;
@@ -12,7 +13,8 @@ public class Reservation {
     private Date dateDeReservation;
 
     public Reservation(Sejour sejour, Personne voyageur) {
-        this.identifiant = 1;
+        compteur++;
+        this.identifiant = compteur;
         this.sejour = sejour;
         this.voyageur = voyageur;
         this.estValidée = false;

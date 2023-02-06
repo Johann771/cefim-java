@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java AirBnB.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP 2 - Les classes.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP 2.1 - static, final.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Logement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/Utile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Personne.java" afterDir="false" />
+    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="Initialisation">
+      <change afterPath="$PROJECT_DIR$/TP 3 - L_héritage _ l_extension.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TP 3.1 - L_héritage _ l_extension de Date.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Hote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Voyageur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Reservation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,8 +89,16 @@
       <updated>1673617354201</updated>
       <workItem from="1673617355287" duration="8050000" />
       <workItem from="1675671034061" duration="910000" />
-      <workItem from="1675673147422" duration="10507000" />
+      <workItem from="1675673147422" duration="11727000" />
     </task>
+    <task id="LOCAL-00001" summary="Initialisation">
+      <created>1675689960426</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675689960426</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialisation" />
   </component>
 </project>

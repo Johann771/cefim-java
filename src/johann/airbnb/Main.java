@@ -28,6 +28,8 @@ public class Main {
 //        String uneDate2 = "06-02-2023";
 //        Date StringDate = Utile.StringtoDate(uneDate2);
 //        System.out.println(StringDate);
+
+
         Date uneDate = Utile.createDate(13,2, 2002);
         String result = Utile.DatetoString(uneDate);
         System.out.println(result);
