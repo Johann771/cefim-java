@@ -20,17 +20,13 @@ public class Main {
 //        Date uneDate = new Date();
 //        String DateString = Utile.DatetoString(uneDate);
 //        System.out.println(DateString);
-//
 //        String uneDate2 = "06-02-2023";
 //        Date StringDate = Utile.StringtoDate(uneDate2);
 //        System.out.println(StringDate);
-//
-//
 //        Date uneDate = Utile.createDate(13,2, 2002);
 //        String result = Utile.DatetoString(uneDate);
 //        System.out.println(result);
             MaDate unedate = new MaDate(29,6,2002);
-
             System.out.println(unedate.toString());
     }
 }
