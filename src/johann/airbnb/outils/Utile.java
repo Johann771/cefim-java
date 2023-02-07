@@ -5,14 +5,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public final class Utile {
-
     private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
 
     private Utile(){}
 
     /**
-    Une méthode permettant de construire une date soit à partir d’une chaîne de
-    caractères au formati "jj-MM-yyy".
+    Une méthode permettant de construire une date à partir d’une chaîne de
+    caractères au format "jj-MM-yyy".
      **/
     public static Date StringtoDate(String str){
         Date result = null;
