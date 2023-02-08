@@ -10,6 +10,11 @@ public class Hote extends Personne{
     @Override
     public void afficher() {
         super.afficher();
-        System.out.print(" qui s'engage à répondre dans les "+delaiDeReponse+" heures");
+        if(delaiDeReponse >1){
+            System.out.println(" qui s'engage à répondre dans les "+delaiDeReponse+" heures ");
+        }
+        else {
+            System.out.println(" qui s'engage à répondre dans l'heure");
+        }
     }
 }

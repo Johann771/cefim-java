@@ -22,7 +22,7 @@ public class Maison extends Logement{
     public void afficher() {
         getHote().afficher();
         System.out.println("Le logement est une maison située : "+getAdresse()+".");
-        System.out.println("Superficie : "+getSuperficieTotal());
+        System.out.println("Superficie : "+getSuperficieTotal()+"m2");
         if(superficieJardin> 0){
             System.out.println("Jardin : Oui ("+superficieJardin+"m2)");
 

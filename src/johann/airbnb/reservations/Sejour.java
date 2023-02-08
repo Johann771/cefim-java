@@ -4,11 +4,12 @@ import johann.airbnb.logements.Logement;
 
 import java.util.Date;
 
-public class Sejour {
+public abstract class Sejour implements SejourInterface {
     private  final Date dateArrivee;
-    private  final int nbNuits;
+    private final int nbNuits;
     private  final Logement logement;
     private final int nbVoyageurs;
+    protected int tarif;
 
     public Sejour(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs) {
         this.dateArrivee = dateArrivee;
@@ -16,9 +17,50 @@ public class Sejour {
         this.logement = logement;
         this.nbVoyageurs = nbVoyageurs;
     }
-    public void afficher(){
-        logement.afficher();
-        System.out.println("La date d'arrivée est le "+dateArrivee+" pour "+nbNuits+" nuits.");
-        System.out.println("Le prix de ce séjour est de "+logement.getTarifParNuit()*nbNuits+"€.");
+
+    public Date getDateArrivee() {
+        return dateArrivee;
     }
+
+    public int getNbNuits() {
+        return nbNuits;
+    }
+
+    public Logement getLogement() {
+        return logement;
+    }
+
+    public int getNbVoyageurs() {
+        return nbVoyageurs;
+    }
+
+    public int getTarif() {
+        return tarif;
+    }
+
+    @Override
+    public boolean verificationDateArrivee() {
+        Date dateactuelle = new Date();
+        if (dateArrivee.after(dateactuelle)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public abstract boolean verificationNombreDeNuits();
+
+    @Override
+    public boolean verificationNombreDeVoyageurs() {
+        if(this.nbVoyageurs <= logement.getNbVoyageursMax())
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public abstract void miseAJourDuTarif();
+    public abstract void afficher();
 }

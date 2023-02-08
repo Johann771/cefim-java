@@ -1,5 +1,6 @@
 package johann.airbnb.reservations;
 
+import johann.airbnb.outils.MaDate;
 import johann.airbnb.utilisateurs.Personne;
 import johann.airbnb.utilisateurs.Voyageur;
 
@@ -11,7 +12,7 @@ public class Reservation {
     private final Sejour sejour;
     private final Voyageur voyageur;
     private final boolean estValidée;
-    private final Date dateDeReservation;
+    private final MaDate dateDeReservation;
 
     public Reservation(Sejour sejour, Voyageur voyageur) {
         compteur++;
@@ -19,11 +20,16 @@ public class Reservation {
         this.sejour = sejour;
         this.voyageur = voyageur;
         this.estValidée = false;
-        this.dateDeReservation = new Date();
+        this.dateDeReservation = new MaDate(6,2,2023);
     }
     public void afficher(){
+        if(sejour.verificationDateArrivee()){
+
+        }
+        System.out.println("Réservation n° "+this.identifiant+" : ");
+        System.out.println("Date de réservation : "+dateDeReservation);
         voyageur.afficher();
-        System.out.println("a fait une réservation chez : ");
+        System.out.println(" a fait une réservation chez : ");
         sejour.afficher();
     }
 }
