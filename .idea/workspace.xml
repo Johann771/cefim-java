@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="Polymorphisme">
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/ConditionsTarifairesInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourCourt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourLong.java" afterDir="false" />
+    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="TP4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johann/airbnb/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Hote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Hote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Personne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourCourt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourCourt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourLong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourLong.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675780243623</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TP4">
+      <created>1675854772049</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675854772049</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +141,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Polymorphisme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Polymorphisme" />
+    <MESSAGE value="TP4" />
+    <option name="LAST_COMMIT_MESSAGE" value="TP4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -149,6 +151,11 @@
           <url>file://$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java</url>
           <line>10</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/johann/airbnb/Main.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

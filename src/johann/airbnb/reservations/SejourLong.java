@@ -10,9 +10,6 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface{
     private int promotion;
     public SejourLong(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs) {
         super(dateArrivee, nbNuits, logement, nbVoyageurs);
-        tarif = logement.getTarifParNuit()*nbNuits;
-        promotion = tarif * PROMOTION_EN_POURCENTAGE/100;
-        tarif = tarif-promotion;
     }
 
     @Override
@@ -43,6 +40,8 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface{
 
     @Override
     public void miseAJourDuTarif() {
-
+        tarif = getLogement().getTarifParNuit()*getNbNuits();
+        promotion = tarif * PROMOTION_EN_POURCENTAGE/100;
+        tarif = tarif-promotion;
     }
 }

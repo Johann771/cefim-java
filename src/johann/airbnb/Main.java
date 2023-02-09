@@ -33,6 +33,5 @@ public class Main {
         }
         Reservation reservation1 = new Reservation(sejour2,voyageur1);
         reservation1.afficher();
-
     }
 }

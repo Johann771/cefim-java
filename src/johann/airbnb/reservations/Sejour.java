@@ -16,6 +16,7 @@ public abstract class Sejour implements SejourInterface {
         this.nbNuits = nbNuits;
         this.logement = logement;
         this.nbVoyageurs = nbVoyageurs;
+        this.miseAJourDuTarif();
     }
 
     public Date getDateArrivee() {
@@ -57,7 +58,8 @@ public abstract class Sejour implements SejourInterface {
         if(this.nbVoyageurs <= logement.getNbVoyageursMax())
         {
             return true;
-        }else{
+
+        } else{
             return false;
         }
     }

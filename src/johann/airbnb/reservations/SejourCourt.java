@@ -8,7 +8,6 @@ public class SejourCourt extends Sejour implements ConditionsTarifairesInterface
 
     public SejourCourt(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs) {
         super(dateArrivee, nbNuits, logement, nbVoyageurs);
-        tarif = nbNuits* logement.getTarifParNuit();
     }
 
     @Override
@@ -31,14 +30,12 @@ public class SejourCourt extends Sejour implements ConditionsTarifairesInterface
 
     @Override
     public boolean verificationNombreDeNuits() {
-        if (getNbNuits() >= 1 && getNbNuits()<=31){
-            return true;
-        }else{
-            return false;
-        }
+        return getNbNuits() > 6 && getNbNuits() <0;
     }
 
     @Override
     public void miseAJourDuTarif() {
+        tarif = getNbNuits()* getLogement().getTarifParNuit();
+
     }
 }
