@@ -1,0 +1,99 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b42c60d7-b4bb-4875-ba6e-6783a1664d94\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Java AirBnB.iml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/TP 2 - Les classes.pdf\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/TP 2.1 - static, final.pdf\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/johann/airbnb/Main.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/johann/airbnb/logements/Logement.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/johann/airbnb/outils/Utile.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/johann/airbnb/reservations/Reservation.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Personne.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2KH2nDmVpuxRIwwfxs2Xe4T4HwA\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"last_opened_file_path\": \"/Users/johannweytens/Downloads/AirBnB\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"settings.editor.selected.configurable\": \"preferences.keymap\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"johann.airbnb.Main\" />\n      <module name=\"Java AirBnB\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"johann.airbnb.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b42c60d7-b4bb-4875-ba6e-6783a1664d94\" name=\"Changes\" comment=\"\" />\n      <created>1673617354201</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1673617354201</updated>\n      <workItem from=\"1673617355287\" duration=\"8050000\" />\n      <workItem from=\"1675671034061\" duration=\"910000\" />\n      <workItem from=\"1675673147422\" duration=\"10507000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 29cb67c5244257e785589ba16ae45f387eb0331e)
++++ b/.idea/workspace.xml	(date 1675695637941)
+@@ -4,22 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Java AirBnB.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/TP 2 - Les classes.pdf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/TP 2.1 - static, final.pdf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Logement.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/Utile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Reservation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Personne.java" afterDir="false" />
++    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="TP3">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -32,9 +18,18 @@
+         <option value="Class" />
+       </list>
+     </option>
++  </component>
++  <component name="Git.Rebase.Settings">
++    <option name="NEW_BASE" value="cefim-master/master" />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -58,6 +53,7 @@
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
++    "run.code.analysis.last.selected.profile": "pProject Default",
+     "settings.editor.selected.configurable": "preferences.keymap",
+     "vue.rearranger.settings.migration": "true"
+   }
+@@ -97,8 +93,24 @@
+       <updated>1673617354201</updated>
+       <workItem from="1673617355287" duration="8050000" />
+       <workItem from="1675671034061" duration="910000" />
+-      <workItem from="1675673147422" duration="10507000" />
++      <workItem from="1675673147422" duration="12227000" />
++      <workItem from="1675691435922" duration="832000" />
+     </task>
++    <task id="LOCAL-00001" summary="Initialisation">
++      <created>1675689960426</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1675689960426</updated>
++    </task>
++    <task id="LOCAL-00002" summary="TP3">
++      <created>1675690978786</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1675690978786</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -115,4 +127,9 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Initialisation" />
++    <MESSAGE value="TP3" />
++    <option name="LAST_COMMIT_MESSAGE" value="TP3" />
++  </component>
+ </project>
+\ No newline at end of file
