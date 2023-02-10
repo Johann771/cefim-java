@@ -5,12 +5,14 @@ import johann.airbnb.logements.*;
 import johann.airbnb.utilisateurs.*;
 import java.util.Date;
 import johann.airbnb.outils.*;
+
+
 public class Main {
     public static void main(String[] args){
         Hote hote = new Hote("Johann", "Weytens", 20, 5);
         Maison maison = new Maison(hote,50,"25 rue des oliviers",60,8,100, true);
         MaDate maDate = new MaDate(14,2,2023);
-        Sejour sejour = new SejourCourt(maDate, 5,maison,7);
+        Sejour sejour = SejourFactory.createSejour(maDate, 5,maison,7);
         Voyageur voyageur = new Voyageur("Peter","Bardu",28);
         try {
             Reservation reservation = new Reservation(sejour,voyageur);
@@ -33,7 +35,7 @@ public class Main {
         Sejour sejour2;
         Date dateSaintValentin = new MaDate(14,02,2023);
         if (nbNuits > 5){
-            sejour2 = new SejourLong(date2, nbNuits, logement3, nbVoyageurs);
+            sejour2 = SejourFactory.createSejour(date2, nbNuits, logement3, nbVoyageurs);
         } else {
             sejour2 = new SejourCourt(date2,nbNuits,logement3,nbVoyageurs);
         }

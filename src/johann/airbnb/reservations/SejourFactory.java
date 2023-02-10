@@ -11,7 +11,7 @@ public class SejourFactory {
     private static final int NB_NUITS = 5;
 
 
-    public  static Sejour createSejour(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs){
+    public static Sejour createSejour(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs){
         Sejour sejour;
         if (dateArrivee.equals(DATE_SAINT_VALENTIN)&& nbNuits < 5 && nbVoyageurs == 2){
             sejour = new SejourSaintValentin(dateArrivee, nbNuits, logement, nbVoyageurs);

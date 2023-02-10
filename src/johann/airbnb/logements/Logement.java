@@ -4,6 +4,8 @@ import johann.airbnb.utilisateurs.Hote;
 import johann.airbnb.utilisateurs.Personne;
 
 public abstract class Logement {
+
+
     private final Hote hote;
     private final int tarifParNuit;
     private final String adresse;

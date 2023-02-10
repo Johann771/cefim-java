@@ -1,8 +1,0 @@
-johann.airbnb.reservations.Reservation@65b54208
-johann.airbnb.reservations.Reservation@7291c18f
-1,johann.airbnb.reservations.SejourCourt@65b54208,johann.airbnb.utilisateurs.Voyageur@1be6f5c3,false,06/02/2023
-2,johann.airbnb.reservations.SejourLong@30dae81,johann.airbnb.utilisateurs.Voyageur@1b2c6ec2,false,06/02/2023
-1,johann.airbnb.reservations.SejourCourt@65b54208,johann.airbnb.utilisateurs.Voyageur@1be6f5c3,false,06/02/2023
-2,johann.airbnb.reservations.SejourLong@1b2c6ec2,johann.airbnb.utilisateurs.Voyageur@4edde6e5,false,06/02/2023
-1,johann.airbnb.reservations.SejourCourt@65b54208,johann.airbnb.utilisateurs.Voyageur@1be6f5c3,false,06/02/2023
-2,johann.airbnb.reservations.SejourLong@1b2c6ec2,johann.airbnb.utilisateurs.Voyageur@4edde6e5,false,06/02/2023

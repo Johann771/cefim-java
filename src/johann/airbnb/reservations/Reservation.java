@@ -18,7 +18,7 @@ public class Reservation {
 
     public Reservation(Sejour sejour, Voyageur voyageur) throws Exception {
 
-        if(sejour != null){
+        if(sejour == null){
             throw new Exception("Sejour null");
         }
         // Vérification de la date d'arrivée
@@ -33,7 +33,6 @@ public class Reservation {
         if (!sejour.verificationNombreDeVoyageurs()) {
             throw new Exception("Erreur avec le nombre de voyageurs");
         }
-
                 compteur++;
                 this.identifiant = compteur;
                 this.sejour = sejour;
@@ -42,15 +41,14 @@ public class Reservation {
                 this.dateDeReservation = new MaDate(6,2,2023);
         try {
             FileWriter fw = new FileWriter("reservations.txt", true);
-            fw.write(this.toString() + "\n");
+            fw.write("Numéro du voyageur : "+this.identifiant + "\n"+"Numéro du logement : " +
+                    this.sejour.getLogement().getAdresse()+"\n"+"Date d'arrivée (DD/MM/YYY) : " +this.sejour.getDateArrivee().toString()+"\n"
+                    +"Nombre de nuits : "+this.sejour.getNbNuits()+"\n"+"Nombre de personnes : "+this.sejour.getNbVoyageurs()
+            +"\n");
             fw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    @Override
-    public String toString() {
-        return this.identifiant + "," + this.sejour.toString() + "," + this.voyageur + "," + this.estValidée + "," + this.dateDeReservation;
     }
     public void afficher(){
         if(sejour.verificationDateArrivee()){
