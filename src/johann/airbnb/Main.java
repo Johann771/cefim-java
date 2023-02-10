@@ -9,11 +9,16 @@ public class Main {
     public static void main(String[] args){
         Hote hote = new Hote("Johann", "Weytens", 20, 5);
         Maison maison = new Maison(hote,50,"25 rue des oliviers",60,8,100, true);
-        MaDate maDate = new MaDate(10,2,2023);
+        MaDate maDate = new MaDate(14,2,2023);
         Sejour sejour = new SejourCourt(maDate, 5,maison,7);
         Voyageur voyageur = new Voyageur("Peter","Bardu",28);
-        Reservation reservation = new Reservation(sejour,voyageur);
-        reservation.afficher();
+        try {
+            Reservation reservation = new Reservation(sejour,voyageur);
+            reservation.afficher();
+        }catch (Exception e){
+            System.out.println(""+e);
+
+        }
 
         Hote hote1 = new Hote("Bardu", "Peter",21, 12);
         Voyageur voyageur1 = new Voyageur("Martin", "Jean", 41);
@@ -26,12 +31,20 @@ public class Main {
         Date date2 = new MaDate(11,2,2023);
         int nbVoyageurs = 12;
         Sejour sejour2;
+        Date dateSaintValentin = new MaDate(14,02,2023);
         if (nbNuits > 5){
             sejour2 = new SejourLong(date2, nbNuits, logement3, nbVoyageurs);
         } else {
             sejour2 = new SejourCourt(date2,nbNuits,logement3,nbVoyageurs);
         }
-        Reservation reservation1 = new Reservation(sejour2,voyageur1);
-        reservation1.afficher();
+        Sejour sejour3 = SejourFactory.createSejour(maDate,20,logement3,6);
+        Reservation reservation1 = null;
+        try {
+            reservation1 = new Reservation(sejour2,voyageur1);
+            reservation1.afficher();
+
+        } catch (Exception e) {
+            System.out.println("Exception : "+ e);
+        }
     }
 }

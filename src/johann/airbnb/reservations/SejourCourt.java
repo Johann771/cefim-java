@@ -30,7 +30,7 @@ public class SejourCourt extends Sejour implements ConditionsTarifairesInterface
 
     @Override
     public boolean verificationNombreDeNuits() {
-        return getNbNuits() > 6 && getNbNuits() <0;
+        return getNbNuits() < 6 && getNbNuits() > 0;
     }
 
     @Override

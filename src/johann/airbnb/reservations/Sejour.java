@@ -45,9 +45,7 @@ public abstract class Sejour implements SejourInterface {
         if (dateArrivee.after(dateactuelle)){
             return true;
         }
-        else {
-            return false;
-        }
+        return false;
     }
 
     @Override

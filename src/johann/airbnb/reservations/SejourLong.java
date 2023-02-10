@@ -33,9 +33,8 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface{
     public boolean verificationNombreDeNuits() {
         if (getNbNuits() >= 1 && getNbNuits()<=31){
             return true;
-        }else{
-            return false;
         }
+        return false;
     }
 
     @Override
