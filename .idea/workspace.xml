@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="TP4 update (menu et exceptions)">
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/LogementsDomParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/LogementsSaxParser.java" afterDir="false" />
+    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="Parse XML files, and other changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johann/airbnb/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Appartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Appartement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Logement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Logement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/outils/LogementsDomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/LogementsDomParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/outils/LogementsSaxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/LogementsSaxParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Hote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Hote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Personne.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +56,11 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -119,7 +125,8 @@
       <workItem from="1676495385665" duration="568000" />
       <workItem from="1676839451991" duration="600000" />
       <workItem from="1678092315720" duration="587000" />
-      <workItem from="1678092921481" duration="6437000" />
+      <workItem from="1678092921481" duration="7122000" />
+      <workItem from="1678108231171" duration="5443000" />
     </task>
     <task id="LOCAL-00001" summary="Polymorphisme">
       <created>1675779426175</created>
@@ -184,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678092503920</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Parse XML files, and other changes">
+      <created>1678100505942</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678100505942</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,18 +220,10 @@
     <MESSAGE value="TP4" />
     <MESSAGE value="TP4 update" />
     <MESSAGE value="TP4 update (menu et exceptions)" />
-    <option name="LAST_COMMIT_MESSAGE" value="TP4 update (menu et exceptions)" />
+    <MESSAGE value="Parse XML files, and other changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parse XML files, and other changes" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/johann/airbnb/Main.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="johann.airbnb.logements.Appartement" memberName="superficie" />

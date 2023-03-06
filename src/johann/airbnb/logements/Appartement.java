@@ -2,35 +2,36 @@ package johann.airbnb.logements;
 
 import johann.airbnb.utilisateurs.Hote;
 
-public class Appartement extends Logement{
+public class Appartement extends Logement {
 
-    private int numeroEtage;
     private int superficieBalcon;
-    public Appartement(Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int numeroEtage, int superficieBalcon) {
-        super(hote, tarifParNuit, adresse, superficie, nbVoyageursMax);
+    private int numeroEtage;
+
+    public Appartement(String name, Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int superficieBalcon, int numeroEtage) {
+        super(name, hote, tarifParNuit, adresse, superficie, nbVoyageursMax);
         this.superficieBalcon = superficieBalcon;
         this.numeroEtage = numeroEtage;
     }
 
     @Override
-    public int getSuperficieTotal() {
-        return this.superficieBalcon+getSuperficie();
+    public void afficher() {
+        getHote().afficher();
+        System.out.print("Le logement est un appartement situé " + getAdresse());
+
+        if (numeroEtage == 0) {
+            System.out.println(" au rez-de-chaussé.");
+        } else if (numeroEtage == 1) {
+            System.out.println(" au 1er étage.");
+        } else {
+            System.out.println(" au " + numeroEtage + "ème étage.");
+        }
+
+        System.out.println("Superficie : " + getSuperficie() + "m2");
+        System.out.println("Balcon : " + (superficieBalcon > 0 ? "Oui (" + superficieBalcon + "m2)" : "Non"));
     }
 
     @Override
-    public void afficher() {
-        getHote().afficher();
-        if(numeroEtage > 1){
-            System.out.println("Le logement est un appartement située : "+getAdresse()+" au "+numeroEtage+"ème étage.");
-        }else{
-            System.out.println("Le logement est un appartement située : "+getAdresse()+" au "+numeroEtage+"er étage.");
-        }
-        System.out.println("Superficie : "+getSuperficie());
-        if(superficieBalcon > 0){
-            System.out.println("Balcon : Oui ("+superficieBalcon+"m2)");
-        }
-        else{
-            System.out.println("Balcon : Non");
-        }
+    public int getSuperficeTotale() {
+        return getSuperficie() + superficieBalcon;
     }
 }

@@ -1,20 +1,33 @@
 package johann.airbnb.utilisateurs;
 
-public class Hote extends Personne{
+public class Hote extends Personne {
+
     private int delaiDeReponse;
-    public Hote(String prenom, String nom, int age, int delaiDeReponse) {
-        super(prenom, nom, age);
+
+    public Hote(String pNom, String pPrenom, int pAge, int delaiDeReponse) {
+        super(pNom, pPrenom, pAge);
         this.delaiDeReponse = delaiDeReponse;
     }
 
     @Override
     public void afficher() {
         super.afficher();
-        if(delaiDeReponse >1){
-            System.out.println(" qui s'engage à répondre dans les "+delaiDeReponse+" heures ");
-        }
-        else {
-            System.out.println(" qui s'engage à répondre dans l'heure");
-        }
+        System.out.println("Delai : " + delaiDeReponse);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        if (!super.equals(o))
+            return false;
+
+        Hote hote = (Hote) o;
+        return delaiDeReponse == hote.delaiDeReponse;
+    }
+
 }

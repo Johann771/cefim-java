@@ -151,11 +151,11 @@ public class LogementsSaxParser {
                     //}
                     break;
                 case APPARTEMENT:
-                    Appartement appartement = new Appartement(hote, Integer.parseInt(tarifParNuit), adresse, Integer.parseInt(superficie), Integer.parseInt(nbVoyageursMax), Integer.parseInt(superficieBalcon), Integer.parseInt(numeroEtage));
+                    Appartement appartement = new Appartement(name,hote, Integer.parseInt(tarifParNuit), adresse, Integer.parseInt(superficie), Integer.parseInt(nbVoyageursMax), Integer.parseInt(superficieBalcon), Integer.parseInt(numeroEtage));
                     logements.add(appartement);
                     break;
                 case MAISON:
-                    Maison maison = new Maison(hote, Integer.parseInt(tarifParNuit), adresse, Integer.parseInt(superficie), Integer.parseInt(nbVoyageursMax), Integer.parseInt(superficieJardin), possedePiscine.equals("1"));
+                    Maison maison = new Maison(name,hote, Integer.parseInt(tarifParNuit), adresse, Integer.parseInt(superficie), Integer.parseInt(nbVoyageursMax), Integer.parseInt(superficieJardin), possedePiscine.equals("1"));
                     logements.add(maison);
                     break;
             }

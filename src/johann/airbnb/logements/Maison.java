@@ -1,39 +1,30 @@
 package johann.airbnb.logements;
 
+
 import johann.airbnb.utilisateurs.Hote;
-import johann.airbnb.utilisateurs.Personne;
 
-public class Maison extends Logement{
+public class Maison extends Logement {
 
-        private int superficieJardin;
-        private boolean possedePiscine;
-    public Maison(Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int superficieJardin, boolean possedePiscine) {
-        super(hote, tarifParNuit, adresse, superficie, nbVoyageursMax);
-        this.superficieJardin = superficieJardin;
+    private int superficeJardin;
+    private boolean possedePiscine;
+
+    public Maison(String name, Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int superficeJardin, boolean possedePiscine) {
+        super(name,hote, tarifParNuit, adresse, superficie, nbVoyageursMax);
+        this.superficeJardin = superficeJardin;
         this.possedePiscine = possedePiscine;
-    }
-
-    @Override
-    public int getSuperficieTotal() {
-        return this.getSuperficie()+this.superficieJardin;
     }
 
     @Override
     public void afficher() {
         getHote().afficher();
-        System.out.println("Le logement est une maison située : "+getAdresse()+".");
-        System.out.println("Superficie : "+getSuperficieTotal()+"m2");
-        if(superficieJardin> 0){
-            System.out.println("Jardin : Oui ("+superficieJardin+"m2)");
+        System.out.println("Le logement est une maison située " + getAdresse());
+        System.out.println("Superficie : " + getSuperficie() + "m2");
+        System.out.println("Piscine : " + (possedePiscine ? "oui" : "non"));
+    }
 
-        }else {
-            System.out.println("Jardin : Non");
-        }
-        if(possedePiscine){
-            System.out.println("Piscine : Oui");
-        } else {
-            System.out.println("Piscine : Non");
-        }
+    @Override
+    public int getSuperficeTotale() {
+        return getSuperficie() + superficeJardin;
     }
 
 }
