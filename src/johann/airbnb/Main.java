@@ -16,22 +16,27 @@ import javax.xml.parsers.ParserConfigurationException;
 
 
 public class Main {
+
+    //Liste de logements
+    private static ArrayList<Logement> logements = new ArrayList<>();
+
     public static void main(String[] args){
-        Hote hote2 = new Hote("Johann", "Weytens", 20, 5);
-        Maison maison2 = new Maison("maison 2",hote2,50,"25 rue des oliviers",60,8,100, true);
-        MaDate maDate = new MaDate(14,2,2023);
-        Sejour sejour = SejourFactory.createSejour(maDate, 5,maison2,7);
-        Voyageur voyageur = new Voyageur("Peter","Bardu",28);
-        try {
-            Reservation reservation = new Reservation(sejour,voyageur);
-            reservation.afficher();
-        }catch (Exception e){
-            System.out.println(""+e);
 
-        }
-
-        Hote hote1 = new Hote("Bardu", "Peter",21, 12);
-        Voyageur voyageur1 = new Voyageur("Martin", "Jean", 41);
+//        Hote hote2 = new Hote("Johann", "Weytens", 20, 5);
+//        Maison maison2 = new Maison("maison 2",hote2,50,"25 rue des oliviers",60,8,100, true);
+//        MaDate maDate = new MaDate(14,2,2023);
+//        Sejour sejour = SejourFactory.createSejour(maDate, 5,maison2,7);
+//        Voyageur voyageur = new Voyageur("Peter","Bardu",28);
+//        try {
+//            Reservation reservation = new Reservation(sejour,voyageur);
+//            reservation.afficher();
+//        }catch (Exception e){
+//            System.out.println(""+e);
+//
+//        }
+//
+//        Hote hote1 = new Hote("Bardu", "Peter",21, 12);
+//        Voyageur voyageur1 = new Voyageur("Martin", "Jean", 41);
         // Infos de la maison
         //Logement maison3 = new Maison(hote1,30,"5 rue des logements",120,6,1000,true);
         //Logement appartement = new Appartement(hote1,100, "3 rue des logements",120,6,12,123);
@@ -56,7 +61,6 @@ public class Main {
 //        } catch (Exception e) {
 //            System.out.println("Exception : "+ e);
 //        }
-
         try {
 
             // Ouvrir le fichier XML
@@ -76,9 +80,6 @@ public class Main {
 
             // Obtenir la liste de tous les logements
             NodeList nodeList = doc.getElementsByTagName("Appartement");
-
-            //Liste de logements
-            ArrayList<Logement> logements = new ArrayList<>();
 
             System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
 
@@ -116,6 +117,14 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        Maison mamaison = findMaisonByName("Maison 1");
+        System.out.println("Maison 1 : " + mamaison);
+        Appartement monAppartement = findAppartementByName("Appartement 1");
+        System.out.println("Appartement 1 : " + monAppartement);
+        Logement monAppartement2 = findLogementByName("Appartement 2");
+        System.out.println("Logement 1 : " + monAppartement2);
+
     }
     private static Hote parseHote(Element element) {
         String nom = element.getElementsByTagName("nom").item(0).getTextContent();
@@ -124,27 +133,27 @@ public class Main {
         int delaiReponse = Integer.parseInt(element.getElementsByTagName("delaiReponse").item(0).getTextContent());
         return new Hote(nom, prenom, age, delaiReponse);
     }
-    Logement findMaisonByName(String name){
-        for (Logement logement : logements) {
+    private  static Maison findMaisonByName(String name){
+        for (Logement logement : logements ) {
             if (logement instanceof Maison) {
-                if (logement.getName().equals(name)) {
+                if (logement.getName().equals(name) && logement != null) {
                     return (Maison) logement;
                 }
             }
         }
         return null;
     }
-    Appartement findAppartementByName(String name){
+    private  static Appartement findAppartementByName(String name){
         for (Logement logement : logements) {
             if (logement instanceof Appartement) {
-                if (logement.getName().equals(name)) {
+                if (logement.getName().equals(name) && logement != null) {
                     return (Appartement) logement;
                 }
             }
         }
         return null;
     }
-    Logement findLogementByName(String name){
+    private static Logement findLogementByName(String name){
         for (Logement logement : logements) {
             if (logement.getName().equals(name)) {
                 return logement;
@@ -152,12 +161,13 @@ public class Main {
         }
         return null;
     }
-    findLogementByNameWithGenericity(String name){
+    private static <T extends Logement> T findLogementByNameWithGenericity(String name, Class<T> type) {
         for (Logement logement : logements) {
-            if (logement.getName().equals(name)) {
-                return logement;
+            if (type.isInstance(logement) && logement.getName().equals(name)) {
+                return type.cast(logement);
             }
         }
         return null;
     }
+
 }
