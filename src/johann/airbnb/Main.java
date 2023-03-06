@@ -1,9 +1,7 @@
 package johann.airbnb;
-import johann.airbnb.outils.Utile;
 import johann.airbnb.reservations.*;
 import johann.airbnb.logements.*;
 import johann.airbnb.utilisateurs.*;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,7 +10,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -20,10 +17,10 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class Main {
     public static void main(String[] args){
-        Hote hote = new Hote("Johann", "Weytens", 20, 5);
-        Maison maison = new Maison(hote,50,"25 rue des oliviers",60,8,100, true);
+        Hote hote2 = new Hote("Johann", "Weytens", 20, 5);
+        Maison maison2 = new Maison(hote2,50,"25 rue des oliviers",60,8,100, true);
         MaDate maDate = new MaDate(14,2,2023);
-        Sejour sejour = SejourFactory.createSejour(maDate, 5,maison,7);
+        Sejour sejour = SejourFactory.createSejour(maDate, 5,maison2,7);
         Voyageur voyageur = new Voyageur("Peter","Bardu",28);
         try {
             Reservation reservation = new Reservation(sejour,voyageur);
@@ -36,8 +33,8 @@ public class Main {
         Hote hote1 = new Hote("Bardu", "Peter",21, 12);
         Voyageur voyageur1 = new Voyageur("Martin", "Jean", 41);
         // Infos de la maison
-        Logement maison2 = new Maison(hote1,30,"5 rue des logements",120,6,1000,true);
-        Logement appartement = new Appartement(hote1,100, "3 rue des logements",120,6,12,123);
+        Logement maison3 = new Maison(hote1,30,"5 rue des logements",120,6,1000,true);
+        //Logement appartement = new Appartement(hote1,100, "3 rue des logements",120,6,12,123);
         Logement logement3 = new Maison(hote1,1500,"4 rue des montagnes", 100,12,100,true);
         // critère
         int nbNuits = 30;
@@ -59,28 +56,70 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Exception : "+ e);
         }
+
         try {
-            File fXmlFile = new File("/Users/johannweytens/Downloads/AirBnB/src/johann/airbnb/logements.xml");
+
+            // Ouvrir le fichier XML
+            File XmlFile = new File("C:\\Users\\weyte\\Downloads\\AirBnB 2\\AirBnB\\src\\johann\\airbnb\\logements.xml");
+
+            // Créer un objet DocumentBuilderFactory
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+
+            // Créer un objet DocumentBuilder
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(fXmlFile);
+
+            // Créer un objet Document à partir du fichier XML
+            Document doc = dBuilder.parse(XmlFile);
+
+            // Normaliser le fichier XML
             doc.getDocumentElement().normalize();
-            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-            NodeList nList = doc.getElementsByTagName("data");
-            System.out.println("----------------------------");
-            ArrayList<String> data = new ArrayList<>();
-            for (int temp = 0; temp < nList.getLength(); temp++) {
-                Node nNode = nList.item(temp);
-                System.out.println("\nCurrent Element :" + nNode.getNodeName());
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
-                    data.add(eElement.getTextContent());
-                }
-                System.out.println(data);
+
+            // Obtenir la liste de tous les logements
+            NodeList nodeList = doc.getElementsByTagName("Appartement");
+
+            //Liste de logements
+            ArrayList<Logement> logements = new ArrayList<>();
+
+            System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+
+            // Parsing des appartements
+            NodeList appartements = doc.getElementsByTagName("Appartement");
+            for (int i = 0; i < appartements.getLength(); i++) {
+                Element appartement = (Element) appartements.item(i);
+                Hote hote = parseHote((Element) appartement.getElementsByTagName("hote").item(0));
+                int tarifParNuit = Integer.parseInt(appartement.getElementsByTagName("tarifParNuit").item(0).getTextContent());
+                String adresse = appartement.getElementsByTagName("adresse").item(0).getTextContent();
+                int superficie = Integer.parseInt(appartement.getElementsByTagName("superficie").item(0).getTextContent());
+                int nbVoyageursMax = Integer.parseInt(appartement.getElementsByTagName("nbVoyageursMax").item(0).getTextContent());
+                int numeroEtage = Integer.parseInt(appartement.getElementsByTagName("numeroEtage").item(0).getTextContent());
+                int superficieBalcon = Integer.parseInt(appartement.getElementsByTagName("superficieBalcon").item(0).getTextContent());
+                logements.add(new Appartement(hote, tarifParNuit, adresse, superficie, nbVoyageursMax, numeroEtage, superficieBalcon));
             }
+            System.out.println("Appartements : " + logements);
+
+            NodeList maisons = doc.getElementsByTagName("Maison");
+            for (int i = 0; i < maisons.getLength(); i++) {
+                Element maison = (Element) maisons.item(i);
+                Hote hote = parseHote((Element) maison.getElementsByTagName("hote").item(0));
+                int tarifParNuit = Integer.parseInt(maison.getElementsByTagName("tarifParNuit").item(0).getTextContent());
+                String adresse = maison.getElementsByTagName("adresse").item(0).getTextContent();
+                int superficie = Integer.parseInt(maison.getElementsByTagName("superficie").item(0).getTextContent());
+                int nbVoyageursMax = Integer.parseInt(maison.getElementsByTagName("nbVoyageursMax").item(0).getTextContent());
+                int superficieJardin = Integer.parseInt(maison.getElementsByTagName("superficieJardin").item(0).getTextContent());
+                boolean piscine = true;
+                logements.add(new Maison(hote, tarifParNuit, adresse, superficie, nbVoyageursMax, superficieJardin, piscine));
+            }
+            System.out.println("Maisons : " +  logements);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+    }
+    private static Hote parseHote(Element element) {
+        String nom = element.getElementsByTagName("nom").item(0).getTextContent();
+        String prenom = element.getElementsByTagName("prenom").item(0).getTextContent();
+        int age = Integer.parseInt(element.getElementsByTagName("age").item(0).getTextContent());
+        int delaiReponse = Integer.parseInt(element.getElementsByTagName("delaiReponse").item(0).getTextContent());
+        return new Hote(nom, prenom, age, delaiReponse);
     }
 }
