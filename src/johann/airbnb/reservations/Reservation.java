@@ -1,12 +1,10 @@
 package johann.airbnb.reservations;
 
 import johann.airbnb.outils.MaDate;
-import johann.airbnb.utilisateurs.Personne;
 import johann.airbnb.utilisateurs.Voyageur;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Date;
 
 public class Reservation {
     private static int compteur = 0;

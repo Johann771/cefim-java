@@ -3,8 +3,19 @@ import johann.airbnb.outils.Utile;
 import johann.airbnb.reservations.*;
 import johann.airbnb.logements.*;
 import johann.airbnb.utilisateurs.*;
+
+import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
 import johann.airbnb.outils.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 
 public class Main {
@@ -48,5 +59,28 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Exception : "+ e);
         }
+        try {
+            File fXmlFile = new File("/Users/johannweytens/Downloads/AirBnB/src/johann/airbnb/logements.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(fXmlFile);
+            doc.getDocumentElement().normalize();
+            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+            NodeList nList = doc.getElementsByTagName("data");
+            System.out.println("----------------------------");
+            ArrayList<String> data = new ArrayList<>();
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+                System.out.println("\nCurrent Element :" + nNode.getNodeName());
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element eElement = (Element) nNode;
+                    data.add(eElement.getTextContent());
+                }
+                System.out.println(data);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
