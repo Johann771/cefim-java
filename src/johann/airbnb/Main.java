@@ -5,6 +5,8 @@ import johann.airbnb.utilisateurs.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
+
 import johann.airbnb.outils.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -64,7 +66,7 @@ public class Main {
         try {
 
             // Ouvrir le fichier XML
-            File XmlFile = new File("C:\\Users\\weyte\\Downloads\\AirBnB 2\\AirBnB\\src\\johann\\airbnb\\logements.xml");
+            File XmlFile = new File("/Users/johannweytens/Downloads/AirBnB/src/johann/airbnb/logements.xml");
 
             // Créer un objet DocumentBuilderFactory
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -122,8 +124,15 @@ public class Main {
         System.out.println("Maison 1 : " + mamaison);
         Appartement monAppartement = findAppartementByName("Appartement 1");
         System.out.println("Appartement 1 : " + monAppartement);
-        Logement monAppartement2 = findLogementByName("Appartement 2");
+        Appartement monAppartement2 = findAppartementByName("Appartement 2");
         System.out.println("Logement 1 : " + monAppartement2);
+        Maison maMaison2 = findLogementByNameWithGenericity("Maison 2");
+        System.out.println("Maison 2 : " + maMaison2);
+
+
+        GenericityClassToCompare<Logement> integerGenericityClassToCompare = new GenericityClassToCompare<>(maMaison2,mamaison);
+        Logement i = integerGenericityClassToCompare.getHigher();
+        i.afficher();
 
     }
     private static Hote parseHote(Element element) {
@@ -155,19 +164,21 @@ public class Main {
     }
     private static Logement findLogementByName(String name){
         for (Logement logement : logements) {
-            if (logement.getName().equals(name)) {
+            if (logement.getName().equals(name) && logement != null) {
                 return logement;
             }
         }
         return null;
     }
-    private static <T extends Logement> T findLogementByNameWithGenericity(String name, Class<T> type) {
+
+    private static <T extends Logement> T findLogementByNameWithGenericity(String name) {
         for (Logement logement : logements) {
-            if (type.isInstance(logement) && logement.getName().equals(name)) {
-                return type.cast(logement);
+            if (Objects.equals(logement.getName(), name) && logement != null) {
+                return (T) logement;
             }
         }
         return null;
     }
+
 
 }
