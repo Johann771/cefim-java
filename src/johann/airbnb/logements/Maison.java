@@ -5,8 +5,8 @@ import johann.airbnb.utilisateurs.Hote;
 
 public class Maison extends Logement {
 
-    private int superficeJardin;
-    private boolean possedePiscine;
+    private final int superficeJardin;
+    private final boolean possedePiscine;
 
     public Maison(String name, Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int superficeJardin, boolean possedePiscine) {
         super(name,hote, tarifParNuit, adresse, superficie, nbVoyageursMax);

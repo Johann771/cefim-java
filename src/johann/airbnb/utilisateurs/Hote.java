@@ -2,7 +2,7 @@ package johann.airbnb.utilisateurs;
 
 public class Hote extends Personne {
 
-    private int delaiDeReponse;
+    private final int delaiDeReponse;
 
     public Hote(String pNom, String pPrenom, int pAge, int delaiDeReponse) {
         super(pNom, pPrenom, pAge);

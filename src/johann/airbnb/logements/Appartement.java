@@ -4,8 +4,8 @@ import johann.airbnb.utilisateurs.Hote;
 
 public class Appartement extends Logement {
 
-    private int superficieBalcon;
-    private int numeroEtage;
+    private final int superficieBalcon;
+    private final int numeroEtage;
 
     public Appartement(String name, Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int superficieBalcon, int numeroEtage) {
         super(name, hote, tarifParNuit, adresse, superficie, nbVoyageursMax);

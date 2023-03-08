@@ -5,7 +5,7 @@ import johann.airbnb.logements.Logement;
 import java.util.Date;
 
 public abstract class Sejour implements SejourInterface {
-    private  final Date dateArrivee;
+    private final Date dateArrivee;
     private final int nbNuits;
     private  final Logement logement;
     private final int nbVoyageurs;
@@ -20,8 +20,9 @@ public abstract class Sejour implements SejourInterface {
     }
 
     public Date getDateArrivee() {
-        return dateArrivee;
+        return new Date(dateArrivee.getTime());
     }
+
 
     public int getNbNuits() {
         return nbNuits;
@@ -61,6 +62,10 @@ public abstract class Sejour implements SejourInterface {
             return false;
         }
     }
+    public void setTarif(int tarif) {
+        this.tarif = tarif;
+    }
+
     public abstract void miseAJourDuTarif();
     public abstract void afficher();
 }

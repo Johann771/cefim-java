@@ -12,6 +12,7 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface{
         super(dateArrivee, nbNuits, logement, nbVoyageurs);
     }
 
+
     @Override
     public void afficher() {
         getLogement().afficher();
@@ -27,6 +28,14 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface{
     @Override
     public int getTarif() {
         return tarif;
+    }
+
+    public int getPromotion() {
+        return promotion;
+    }
+
+    public void setPromotion(int promotion) {
+        this.promotion = promotion;
     }
 
     @Override

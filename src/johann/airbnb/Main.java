@@ -134,6 +134,37 @@ public class Main {
         Logement i = integerGenericityClassToCompare.getHigher();
         i.afficher();
 
+
+
+
+
+
+        Date dateArrivee = new MaDate(1,1,2023);
+        int nbNuits = 10;
+        int nbVoyageurs = 12;
+        Maison maison = new Maison("Maison1",new Hote("Johann",
+                "Weytens", 30, 10), 100, "Rue de la paix",
+                100, 10, 100, true);
+
+        // Créer une copie de dateArrivee
+        Date dateArriveeCopy = new Date(dateArrivee.getTime());
+
+//        Sejour sejour = new SejourLong(dateArriveeCopy, nbNuits, maison, nbVoyageurs);
+//        dateArrivee.setYear(98);
+//        sejour.afficher();
+
+        Sejour sejour2 = new SejourLong(dateArrivee, nbNuits, maison, nbVoyageurs);
+        // J'utilise une copie défensive
+        Date date = sejour2.getDateArrivee();
+        date.setYear(98);
+        sejour2.afficher();
+
+
+
+
+
+
+
     }
     private static Hote parseHote(Element element) {
         String nom = element.getElementsByTagName("nom").item(0).getTextContent();

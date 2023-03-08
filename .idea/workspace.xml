@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="Parse XML files, and other changes">
-      <change afterPath="$PROJECT_DIR$/TP 7 - La généricité (méthode).pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP 7.1 - La généricité (classe).pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/GenericityClassToCompare.java" afterDir="false" />
+    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="Classe générique pour comparer">
+      <change afterPath="$PROJECT_DIR$/TP 8 - Code Safe.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johann/airbnb/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Appartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Appartement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Logement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Logement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourLong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourLong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Hote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/utilisateurs/Hote.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/src.zip!/java.base/java/lang/NullPointerException.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/src.zip!/java.base/java/util/Date.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -199,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678100505942</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Classe générique pour comparer">
+      <created>1678197255149</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678197255149</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +233,8 @@
     <MESSAGE value="TP4 update" />
     <MESSAGE value="TP4 update (menu et exceptions)" />
     <MESSAGE value="Parse XML files, and other changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parse XML files, and other changes" />
+    <MESSAGE value="Classe générique pour comparer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classe générique pour comparer" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

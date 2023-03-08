@@ -6,12 +6,12 @@ import johann.airbnb.utilisateurs.Personne;
 
 public  abstract class Logement extends Object implements Comparable<Logement> {
 
-    private String name;
-    private Hote hote;
-    private int tarifParNuit;
-    private String adresse;
-    private int superficie;
-    private int nbVoyageursMax;
+    private final String name;
+    private final Hote hote;
+    private final int tarifParNuit;
+    private final String adresse;
+    private final int superficie;
+    private final int nbVoyageursMax;
 
     public Logement(String name, Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax) {
         super();
