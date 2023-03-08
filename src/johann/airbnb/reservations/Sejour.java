@@ -12,7 +12,7 @@ public abstract class Sejour implements SejourInterface {
     protected int tarif;
 
     public Sejour(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs) {
-        this.dateArrivee = dateArrivee;
+        this.dateArrivee = (Date) dateArrivee.clone();
         this.nbNuits = nbNuits;
         this.logement = logement;
         this.nbVoyageurs = nbVoyageurs;
@@ -20,7 +20,7 @@ public abstract class Sejour implements SejourInterface {
     }
 
     public Date getDateArrivee() {
-        return new Date(dateArrivee.getTime());
+        return (Date) dateArrivee.clone();
     }
 
 
