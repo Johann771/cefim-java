@@ -24,7 +24,7 @@ public class Main {
 
     public static void main(String[] args){
 
-//        Hote hote2 = new Hote("Johann", "Weytens", 20, 5);
+        Hote hote2 = new Hote("Johann", "Weytens", 20, 5);
 //        Maison maison2 = new Maison("maison 2",hote2,50,"25 rue des oliviers",60,8,100, true);
 //        MaDate maDate = new MaDate(14,2,2023);
 //        Sejour sejour = SejourFactory.createSejour(maDate, 5,maison2,7);
@@ -42,7 +42,7 @@ public class Main {
         // Infos de la maison
         //Logement maison3 = new Maison(hote1,30,"5 rue des logements",120,6,1000,true);
         //Logement appartement = new Appartement(hote1,100, "3 rue des logements",120,6,12,123);
-        //Logement logement3 = new Maison(hote1,1500,"4 rue des montagnes", 100,12,100,true);
+        Logement logement3 = new Maison("Ma superbe Maison",hote2,1500,"4 rue des montagnes", 100,12,100,true);
         // critère
 //        int nbNuits = 30;
 //        Date date2 = new MaDate(11,2,2023);
@@ -66,7 +66,7 @@ public class Main {
         try {
 
             // Ouvrir le fichier XML
-            File XmlFile = new File("/Users/johannweytens/Downloads/AirBnB/src/johann/airbnb/logements.xml");
+            File XmlFile = new File("C:\\Users\\weyte\\Downloads\\AirBnB 2\\AirBnB\\src\\johann\\airbnb\\logements.xml");
 
             // Créer un objet DocumentBuilderFactory
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -160,9 +160,22 @@ public class Main {
         sejour2.afficher();
 
 
+        Sejour sejour = SejourFactory.getSejour(dateArrivee, nbNuits,logement3,
+                nbVoyageurs);
 
+        System.out.println("Instance de AirBnBData : "+AirBnBData.getInstance());
 
-
+        Search.SearchBuilder searchBuilder = new Search.SearchBuilder(3)
+                .possedeJardin(false)
+                .tarifMinParNuit(100)
+                .possedeBalcon(true)
+                .tarifMaxParNuit(220);
+        Search search = searchBuilder.build();
+        ArrayList<Logement> logements = search.result();
+        for (Logement logement: logements) {
+            System.out.println("--------------------------");
+            logement.afficher();
+        }
 
 
     }

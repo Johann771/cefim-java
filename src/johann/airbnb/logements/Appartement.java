@@ -30,6 +30,10 @@ public class Appartement extends Logement {
         System.out.println("Balcon : " + (superficieBalcon > 0 ? "Oui (" + superficieBalcon + "m2)" : "Non"));
     }
 
+    public int getSuperficieBalcon() {
+        return superficieBalcon;
+    }
+
     @Override
     public int getSuperficeTotale() {
         return getSuperficie() + superficieBalcon;

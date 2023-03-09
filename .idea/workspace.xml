@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="Parse XML files, and other changes">
+    <list default="true" id="b42c60d7-b4bb-4875-ba6e-6783a1664d94" name="Changes" comment="clone instead of new">
+      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/AirBnBData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/johann/airbnb/outils/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/Sejour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Appartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Appartement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/logements/Maison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johann/airbnb/reservations/SejourFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +126,7 @@
       <workItem from="1678092315720" duration="587000" />
       <workItem from="1678092921481" duration="7122000" />
       <workItem from="1678108231171" duration="5443000" />
+      <workItem from="1678350957254" duration="6365000" />
     </task>
     <task id="LOCAL-00001" summary="Polymorphisme">
       <created>1675779426175</created>
@@ -192,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678100505942</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="clone instead of new">
+      <created>1678272234783</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678272234783</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +228,8 @@
     <MESSAGE value="TP4 update" />
     <MESSAGE value="TP4 update (menu et exceptions)" />
     <MESSAGE value="Parse XML files, and other changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parse XML files, and other changes" />
+    <MESSAGE value="clone instead of new" />
+    <option name="LAST_COMMIT_MESSAGE" value="clone instead of new" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

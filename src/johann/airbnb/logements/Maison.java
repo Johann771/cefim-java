@@ -14,6 +14,14 @@ public class Maison extends Logement {
         this.possedePiscine = possedePiscine;
     }
 
+    public boolean isPossedePiscine() {
+        return possedePiscine;
+    }
+
+    public int getSuperficeJardin() {
+        return superficeJardin;
+    }
+
     @Override
     public void afficher() {
         getHote().afficher();
